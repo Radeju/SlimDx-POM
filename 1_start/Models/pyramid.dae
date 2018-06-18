@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Maciej</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.4.0;  Revision: exported;  Platform: x64;  Configuration: Release_Max2013_static</authoring_tool>
+    </contributor>
+    <created>2013-04-07T10:26:10</created>
+    <modified>2013-04-07T10:26:10</modified>
+    <unit name="inch" meter="0.0254"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="ColorEffectR135G59B8">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <ambient>
+              <color>0.5294118 0.2313726 0.03137255 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.5294118 0.2313726 0.03137255 1</color>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="ColorEffectR135G59B8-material" name="ColorEffectR135G59B8-material">
+      <instance_effect url="#ColorEffectR135G59B8"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Pyramid001" name="Pyramid001">
+      <mesh>
+        <source id="geom-Pyramid001-positions">
+          <float_array id="geom-Pyramid001-positions-array" count="18">0 0 16.79012 -10.12346 -10.37037 0 10.12346 -10.37037 0 10.12346 10.37037 0 -10.12346 10.37037 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Pyramid001-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Pyramid001-normals">
+          <float_array id="geom-Pyramid001-normals-array" count="51">0 -0.850798 0.5254929 0 -0.850798 0.5254929 0 -0.850798 0.5254929 0.8563797 0 0.5163466 0.8563797 0 0.5163466 0.8563797 0 0.5163466 0 0.850798 0.5254929 0 0.850798 0.5254929 0 0.850798 0.5254929 -0.8563797 0 0.5163466 -0.8563797 0 0.5163466 -0.8563797 0 0.5163466 0 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999</float_array>
+          <technique_common>
+            <accessor source="#geom-Pyramid001-normals-array" count="17" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Pyramid001-map1">
+          <float_array id="geom-Pyramid001-map1-array" count="33">0.5 1 0 0 0 0 1 0 0 0.01190478 0 0 1.011905 0 0 0 1 0 1 1 0 1 0 0 0 0 0 0.5 0.5 0 0.5 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Pyramid001-map1-array" count="11" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Pyramid001-map1-textangents">
+          <float_array id="geom-Pyramid001-map1-textangents-array" count="51">1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Pyramid001-map1-textangents-array" count="17" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Pyramid001-map1-texbinormals">
+          <float_array id="geom-Pyramid001-map1-texbinormals-array" count="51">0 -0.5254929 -0.850798 0 -0.5254929 -0.850798 0 -0.5254929 -0.850798 0.5163466 0 -0.8563797 0.5163466 0 -0.8563797 0.5163466 0 -0.8563797 0 0.5254929 -0.850798 0 0.5254929 -0.850798 0 0.5254929 -0.850798 -0.5163466 0 -0.8563797 -0.5163466 0 -0.8563797 -0.5163466 0 -0.8563797 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Pyramid001-map1-texbinormals-array" count="17" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Pyramid001-vertices">
+          <input semantic="POSITION" source="#geom-Pyramid001-positions"/>
+        </vertices>
+        <triangles material="ColorMaterial" count="8">
+          <input semantic="VERTEX" source="#geom-Pyramid001-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Pyramid001-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Pyramid001-map1" offset="2" set="0"/>
+          <input semantic="TEXTANGENT" source="#geom-Pyramid001-map1-textangents" offset="3" set="1"/>
+          <input semantic="TEXBINORMAL" source="#geom-Pyramid001-map1-texbinormals" offset="3" set="1"/>
+          <p>0 0 0 0 1 1 1 1 2 2 2 2 0 3 10 3 2 4 3 4 3 5 4 5 0 6 0 6 3 7 1 7 4 8 2 8 0 9 10 9 4 10 3 10 1 11 4 11 1 12 5 12 5 13 9 13 2 14 6 14 2 14 6 14 5 13 9 13 3 15 7 15 3 15 7 15 5 13 9 13 4 16 8 16 4 16 8 16 5 13 9 13 1 12 5 12</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_pyramid>
+            <depth>20.74074</depth>
+            <depthsegments>1</depthsegments>
+            <generateuvs>1</generateuvs>
+            <height>16.79012</height>
+            <heightsegments>1</heightsegments>
+            <width>20.24691</width>
+            <widthsegments>1</widthsegments>
+          </max_pyramid>
+        </technique>
+      </extra>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Pyramid001" name="Pyramid001">
+        <translate>-0.9876542 -0.7407403 0.005</translate>
+        <instance_geometry url="#geom-Pyramid001">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="ColorMaterial" target="#ColorEffectR135G59B8-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>
