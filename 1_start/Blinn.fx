@@ -283,17 +283,6 @@ float4 PSPOM(PS_IN IN) :SV_TARGET {
 	//czy POM ma byc wlaczony
 	resultParallaxOffset = xPomOn == true ? resultParallaxOffset : IN.UV;
 		
-	//proba oswietlenia
-	//1) Z mapy wysokosci
-	/*
-	float3 NTS = normalize(mul( TBN, Nn ));
-	float3 theta = float3(1.0, 0.0, xHeightMap.Sample(PlanarSampler, resultParallaxOffset + dtx).x - xHeightMap.Sample(PlanarSampler, resultParallaxOffset - dtx).x);
-	float3 beta = float3(0.0, 1.0, xHeightMap.Sample(PlanarSampler, resultParallaxOffset + dty).x - xHeightMap.Sample(PlanarSampler, resultParallaxOffset - dty).x);
-	float3 bump = normalize(cross(theta,beta));
-    NTS = NTS + bump.x*Tn + bump.y*Bn;
-	NTS = NTS + mul(TBN, bump);
-	NTS = normalize(NTS);
-	*/
 	//2) Z .tga
 	float3 NTS = float3(xTga.Sample(PlanarSampler, resultParallaxOffset).rgb);
 	NTS = normalize(mul(TBN, NTS));
@@ -366,57 +355,3 @@ technique10 POM
 		SetBlendState(DisableBlend, float4( 0.0f, 0.0f, 0.0f, 0.0f ), 0xFFFFFFFF);
     }
 }
-
-//bazgroly ale nie chce ich wyrzucac
-/*
-	//zmienne
-	//wektor ktory prowadzimy od szukanego piksela i sprawdzamy jego znak
-	float3 foundVec = float3(0.0f, 0.0f, 0.0f);
-	float3 foundPix = float3(0.0f, 0.0f, 0.0f);
-	float sumCurrent = 0.0f;
-	float sumPrev = 0.0f;
-
-	//to przed petla
-	foundPix.xy = PixTangent.xy;
-	foundPix.z = PixTangent.z;
-	foundPix.z -= xAlpha * xTga.Sample(PlanarSampler, IN.UV).a;
-	foundVec = normalize(PixTangent - foundPix);	
-	sumCurrent = dot(foundVec, EyeTangent);
-	sumPrev = 0.0f;
-	float3 signOfVector = cross(foundVec, EyeTangent);		//1 lub -1
-	
-
-
-		sumPrev = sumCurrent;
-		foundPix.xy = PixTangent.xy + stepSize*ParallaxDirection;
-		//wpierw na wysokosc piksela gornego a pozniej odejmujemy
-		foundPix.z = PixTangent.z;
-		foundPix.z -= xAlpha * xHeightMap.Sample(PlanarSampler, IN.UV + stepSize*ParallaxDirection).x;
-
-		foundVec = normalize(PixTangent - foundPix);
-		sumCurrent = dot(foundVec, EyeTangent);
-		*/
-
-		/*
-		if(!found)
-		{
-			if(sumCurrent < sumPrev)
-			{
-				resultOffset = stepSize;
-				resultParallaxOffset = ParallaxOffset;
-				found = true;
-			}
-		}
-		*/
-
-		/*
-		if(!found)
-		{
-			if(dot(cross(foundVec, EyeTangent), signOfVector) < 0)
-			{
-				resultOffset = stepSize;
-				resultParallaxOffset = ParallaxOffset;
-				found = true;
-			}
-		}
-*/
